@@ -1,9 +1,22 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "menus.h"
 #include "formes.h"
 #include "saisie.h"
 
+/**
+ * @brief Creates a new geometric shape.
+ *
+ * Checks whether the maximum number of shapes has been reached.
+ * Asks the user to choose a shape type and enter its coordinates
+ * and dimensions.
+ *
+ * Stores the new shape in the shapes array, increments the number
+ * of registered shapes, and generates the corresponding SVG file.
+ *
+ * @return No value.
+ */
 void menu_creer(void)
 {
     int choix;
@@ -78,6 +91,19 @@ void menu_creer(void)
     genererSVG(nbFormes);
 }
 
+/**
+ * @brief Modifies an existing shape.
+ *
+ * Checks whether at least one shape exists, displays the list
+ * of shapes, and asks the user to select one.
+ *
+ * Validates the selected number, then asks for new coordinates
+ * and dimensions according to the shape type.
+ *
+ * Updates the shape in memory and regenerates its SVG file.
+ *
+ * @return No value.
+ */
 void modifierForme(void)
 {
     int numero;
@@ -148,6 +174,20 @@ void modifierForme(void)
     (void)choix;
 }
 
+/**
+ * @brief Deletes an existing shape.
+ *
+ * Checks whether any shapes exist, displays the list, and asks
+ * the user to select a shape to delete.
+ *
+ * Removes the corresponding SVG file and shifts the remaining
+ * shapes in the array to fill the empty position.
+ *
+ * Decreases the number of registered shapes and renames the
+ * remaining SVG files. If a file cannot be renamed, regenerates it.
+ *
+ * @return No value.
+ */
 void supprimerForme(void)
 {
     int numero;
@@ -198,6 +238,21 @@ void supprimerForme(void)
     printf("Forme supprimee.\n");
 }
 
+/**
+ * @brief Opens an existing shape's SVG file.
+ *
+ * Checks whether any shapes exist, displays the list, and asks
+ * the user to select a shape to visualize.
+ *
+ * Validates the selected number, generates the corresponding
+ * SVG file, and attempts to open it using the system's default
+ * application for SVG files.
+ *
+ * If the file cannot be opened automatically, displays a message
+ * asking the user to open it manually.
+ *
+ * @return No value.
+ */
 void visualiserForme(void)
 {
     int numero;

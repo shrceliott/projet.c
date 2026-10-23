@@ -6,6 +6,18 @@
 #include "suppression.h"
 #include "visualisation.h"
 
+/**
+ * @brief Runs the main program menu.
+ *
+ * Displays the main menu and asks the user to choose an action.
+ * Depending on the choice, calls the function to create, modify,
+ * delete or visualize a shape.
+ *
+ * The menu is displayed repeatedly until the user chooses to quit.
+ * If the choice is invalid, displays an error message.
+ *
+ * @return 0 when the program exits successfully.
+ */
 int main(void)
 {
     int choix;

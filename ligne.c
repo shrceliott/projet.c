@@ -2,6 +2,17 @@
 #include <stdio.h>
 #include "ligne.h"
 
+/**
+ * @brief Creates a line in an SVG file.
+ *
+ * Writes an SVG line element using the starting and ending
+ * coordinates provided by the line structure.
+ * The line is black and has a stroke width of 2.
+ *
+ * @param fichier Pointer to the SVG file.
+ * @param ligne Structure containing the line's starting and ending coordinates.
+ * @return No value.
+ */
 void creerLigne(FILE *fichier, struct Ligne ligne)
 {
     fprintf(fichier,

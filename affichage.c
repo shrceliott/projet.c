@@ -3,6 +3,18 @@
 #include "forme.h"
 #include "affichage.h"
 
+/**
+ * @brief Displays the list of registered shapes.
+ *
+ * If no shapes are registered, displays a message
+ * and stops the function.
+ *
+ * Otherwise, iterates through the shapes array and displays
+ * the number and type of each shape: rectangle, ellipse or line.
+ * If the type is unknown, displays an appropriate message.
+ *
+ * @return No value.
+ */
 void afficherFormes(void)
 {
     if (nbFormes == 0) {
@@ -33,3 +45,4 @@ void afficherFormes(void)
         }
     }
 }
+

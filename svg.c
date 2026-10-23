@@ -6,6 +6,23 @@
 #include "ligne.h"
 #include "svg.h"
 
+/**
+ * @brief Generates an SVG file for a specific shape.
+ *
+ * Checks whether the specified shape number is valid.
+ * Creates an SVG filename and opens the file in write mode.
+ *
+ * Writes the SVG header, then calls the appropriate function
+ * to draw the shape according to its type.
+ *
+ * If the file cannot be opened, displays an error message.
+ * If the shape type is unknown, displays an error message.
+ *
+ * Writes the closing SVG tag and closes the file.
+ *
+ * @param numero Number of the shape to generate, starting at 1.
+ * @return No value.
+ */
 void genererSVG(int numero)
 {
     if (numero < 1 || numero > nbFormes)

@@ -5,6 +5,22 @@
 #include "svg.h"
 #include "creation.h"
 
+/**
+ * @brief Creates a new geometric shape.
+ *
+ * Checks whether the maximum number of shapes has been reached.
+ * Asks the user to choose a shape type and enter the required
+ * coordinates and dimensions.
+ *
+ * Stores the new shape in the shapes array, increments the
+ * number of registered shapes, and generates the corresponding
+ * SVG file.
+ *
+ * If the user's choice is invalid, displays an error message
+ * and stops the function.
+ *
+ * @return No value.
+ */
 void creerForme(void)
 {
     if (nbFormes >= MAX_FORMES) {
